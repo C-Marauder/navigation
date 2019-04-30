@@ -8,7 +8,32 @@ Fragment导航框架
 
 `implementation 'com.xqy.fragment.navigation:navigation:1.0.0'`
 
+## 2.使用
 
+* AppCompatActivity
+
+```
+class MainActivity : AppCompatActivity(), NavigatorCallback{//实现NavigatorCallback接口
+
+   override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        createNavigator(R.navigation.nav)//创建navigator
+
+    }
+}
+```
+* Fragment
+
+```
+class LoanFragment:Fragment() {
+    private lateinit var callback: NavigatorCallback
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        callback = context as NavigatorCallback
+    }
+}
+```
+> 在需要切换页面的逻辑处调用callback.navigate(R.id.login_fragment)
 
  <img src="https://github.com/xqy666666/navigation/blob/master/navigation.gif" width="200" height="400" />
 
