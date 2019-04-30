@@ -10,4 +10,5 @@ Fragment导航框架
 
 
 
+ <img src="https://github.com/xqy666666/navigation/blob/master/navigation.gif" width="200" height="400" />
 
