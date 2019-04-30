@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav"
+            app:startDestination="@id/splash_fragment">
+    <fragment android:id="@+id/splash_fragment"
+              android:name="com.example.navigation.SplashFragment"/>
+    <fragment android:id="@+id/loan_fragment"
+    android:name="com.example.navigation.LoanFragment"/>
+    <fragment android:id="@+id/login_fragment"
+    android:name="com.example.navigation.LoginFragment"/>
+</navigation>

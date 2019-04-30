@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <FrameLayout
+            android:id="@+id/tabView"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="72dp"
+            android:layout_marginEnd="72dp">
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_one"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="社保"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+
+        />
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_two"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="信用卡"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
+
+        />
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_three"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="公积金"
+                android:gravity="center"
+                android:layout_gravity="end"
+                android:textColor="@color/colorAccent"
+        />
+
+    </FrameLayout>
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabView"
+    />
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:id="@+id/cardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_margin="72dp"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="16dp"
+            android:transitionName="card"/>
+    <com.example.navigation.IndicatorView
+            android:id="@+id/indicatorView"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="content" type="java.lang.String"/>
+        <variable name="holder" type="com.example.myapplication.MyViewHolder"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/contentView"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="18sp"
+                android:text="@{content}"
+                android:onClick="@{()->holder.addItem()}"
+        />
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/itemContainer"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contentView"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
