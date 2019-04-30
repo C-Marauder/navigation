@@ -9,6 +9,10 @@ Fragment导航框架
 `implementation 'com.xqy.fragment.navigation:navigation:1.0.0'`
 
 ## 2.使用
+* 创建navigation资源文件
+
+ <img src="https://github.com/xqy666666/navigation/blob/master/navigation.png" width="200" height="400" />
+
 
 * AppCompatActivity
 
