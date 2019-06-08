@@ -6,7 +6,7 @@ Fragment导航框架
 
 ## 1.依赖
 
-`implementation 'com.xqy.fragment.navigation:navigation:1.2.2'`
+`implementation 'com.xqy.fragment.navigation:navigation:1.2.3'`
 
 ## 2.使用
 * 创建navigation资源文件
